@@ -11,8 +11,11 @@
 // so in order reduce to that
 var foo = function(name) { this.myName = name;}
 
+foo.prototype.tellMyName = function() {   console.log(this.myName);}
 
 var obj1 = new foo('santhoshkumar');
 console.log(obj1.tellMyName())
+var obj2 = new foo('sandy');
+console.log(obj2.tellMyName())
 
 
