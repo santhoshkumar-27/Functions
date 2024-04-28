@@ -20,15 +20,43 @@ console.log('this.tellMyName', myObj)
 // }
 
 // for older versions
-function Myclass() { } 
-Myclass.welcome = function () { console.log("Hello World"); }
+function Myclasss() { }
+Myclasss.welcome = function () { console.log("Hello World"); }
 
 /**
  * Static properties are something that
  * you can access without creating an instance of the class. 
  * On the other hand, the instance will not have access to the static properties of a class.
 */
-Myclass.welcome()
+Myclasss.welcome()
 
-const myObj1 = new Myclass();
-myObj1.welcome();
+const myObj1 = new Myclasss();
+// static method not available for the instances only we can call with the class
+try {
+    myObj1.welcome();
+} catch (e) {
+
+}
+
+class Vehicle {
+    constructor(type) {
+        this.vehicleType = type;
+    }
+    blowHorn() {
+        console.log("Honk! Honk! Honk!");
+    }
+}
+class Bus extends Vehicle {
+
+    constructor(make) { 
+        super("Bus");
+        this.make = make; 
+    }
+    accelerator() { console.log('Accelerating Bus'); }
+    brake() { console.log('Braking Bus'); }
+}
+Bus.prototype.noOfWheels = 6;
+
+
+const myBus = new Bus("Mercedes");
+console.log('myBus', myBus)
