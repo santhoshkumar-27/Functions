@@ -29,4 +29,6 @@ Bus.prototype.brake = function () {
     // Bus brake
 }
 
-console.dir(Bus)
+var myBus = new Bus('Mercedes')
+
+console.dir(myBus)
