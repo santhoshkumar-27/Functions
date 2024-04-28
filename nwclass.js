@@ -1,5 +1,5 @@
 class Myclass {
-    
+    lastName = "lewis"; // property alwasy added to the instances
     constructor(name) {
         this.name = name;
     }
