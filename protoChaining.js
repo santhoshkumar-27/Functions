@@ -14,6 +14,12 @@ function Bus(make) {
     this.make = make
 }
 
+console.log('Object.create(Vehicle.prototype)', Object.create(Vehicle.prototype))
+/**
+ *  Object.create(Vehicle.prototype) will create an empty object whose prototype is Vehicle.prototype. 
+ *  We set this object as a prototype of Bus. For Vehicle.prototype we haven’t specified any prototype 
+ *  so by default it inherits from Object.prototype.
+ */
 // Object.create method create prototype to the object from the mention object
 Bus.prototype = Object.create(Vehicle.prototype)
 
@@ -32,3 +38,6 @@ Bus.prototype.brake = function () {
 var myBus = new Bus('Mercedes')
 
 console.dir(myBus)
+
+var obj = Object.create(null)
+console.dir(obj)
