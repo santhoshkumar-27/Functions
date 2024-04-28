@@ -1,5 +1,6 @@
 class Myclass {
     lastName = "lewis"; // property alwasy added to the instances
+    tellMyNameArrow = () => { console.log(this.name) };
     constructor(name) {
         this.name = name;
     }
