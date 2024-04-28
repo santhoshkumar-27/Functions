@@ -24,3 +24,11 @@ console.log(obj2.tellMyName())
 
 // it because true based on the same reference 
 console.log(obj1.tellMyName === obj2.tellMyName)
+
+var arr = [1, 2, 3, 4];
+
+var prototypeOfArr = Object.getPrototypeOf(arr);
+
+prototypeOfArr === Array.prototype;
+
+prototypeOfArr === arr.__proto__;
