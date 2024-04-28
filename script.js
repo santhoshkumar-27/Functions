@@ -18,6 +18,7 @@ console.dir(foo)
 foo.prototype.tellMyName = function() {   console.log(this.myName);}
 
 var obj1 = new foo('santhoshkumar');
+console.log(obj1)
 console.log(obj1.tellMyName())
 var obj2 = new foo('sandy');
 console.log(obj2.tellMyName())
@@ -32,3 +33,8 @@ var prototypeOfArr = Object.getPrototypeOf(arr);
 prototypeOfArr === Array.prototype;
 
 prototypeOfArr === arr.__proto__;
+
+
+var arr = [1, 2, 3, 4];
+
+arr.__proto__ === Array.prototype
