@@ -13,11 +13,15 @@ const myObj = new Myclass("John");
 
 console.log('this.tellMyName', myObj)
 // creating static method with new es2015 syntax
-class Myclass {
-    static welcome() {
-        console.log("Hello World");
-    }
-}
+// class Myclass {
+//     static welcome() {
+//         console.log("Hello World");
+//     }
+// }
+
+// for older versions
+function Myclass() { } 
+Myclass.welcome = function () { console.log("Hello World"); }
 
 /**
  * Static properties are something that
