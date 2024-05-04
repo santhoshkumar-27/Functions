@@ -16,3 +16,13 @@ const newBrand = new setBrand('Brand1', 100000);
 
 
 console.log('newBrand', newBrand)
+
+// How to call a function with no arguments in JS
+const newEntity = (obj) => console.log(obj);
+
+function mountEntity(){
+	// this.entity = newEntity;
+	console.log(`Entity  is mounted on ${this}`);
+}
+
+mountEntity.call();
