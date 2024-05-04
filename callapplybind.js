@@ -20,9 +20,9 @@ console.log('newBrand', newBrand)
 // How to call a function with no arguments in JS
 const newEntity = (obj) => console.log(obj);
 
-function mountEntity(){
-	// this.entity = newEntity;
-	console.log(`Entity  is mounted on ${this}`);
+function mountEntity() {
+    // this.entity = newEntity;
+    console.log(`Entity  is mounted on ${this}`);
 }
 
 mountEntity.call();
@@ -46,3 +46,21 @@ const newBrand1 = new setBrand1('Brand1', 100000);
 
 
 console.log('newBrand1', newBrand)
+
+
+function addUp() {
+    console.log('arguments',arguments)
+    //Using arguments to capture the arbitrary number of inputs
+    const args = Array.from(arguments);
+    this.x = args.reduce((prev, curr) => prev + curr, 0);
+    console.log("this.x = ", this.x);
+}
+
+function driverFunc() {
+    const obj = {
+        inps: [1, 2, 3, 4, 5, 6]
+    }
+    addUp.apply(obj, obj.inps);
+}
+
+driverFunc();
